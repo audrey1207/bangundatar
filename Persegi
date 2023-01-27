@@ -1,0 +1,32 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package object;
+
+//import java.util.Scanner;
+
+import javax.swing.JOptionPane;
+public class persegi {
+   int sisi;
+   
+   public persegi (){
+       this.sisi=sisi;
+   }
+   public void luasp (){
+       int luaspersegi= sisi*sisi;
+       JOptionPane.showMessageDialog(null, "luas persegi: "+luaspersegi);
+   }
+   
+   public void kellp(int sisi){
+       int kelilingp= 4*sisi;
+       JOptionPane.showMessageDialog(null,"keliling persegi: "+kelilingp);
+   }
+   public static void main(String[] args) {
+      persegi p = new persegi();
+      p.sisi= Integer.parseInt(JOptionPane.showInputDialog("sisi: "));
+      p.luasp();
+      p.kellp(p.sisi);
+    }
+    }
