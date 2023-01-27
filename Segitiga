@@ -1,0 +1,54 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package object;
+
+import java.util.Scanner;
+import javax.swing.JOptionPane;
+
+/**
+ *
+ * @author audre
+ */
+public class Segitiga {
+    int alas;
+    int tinggi;
+    int sisi;
+    
+    public Segitiga (){
+       this.alas=alas;
+       this.tinggi=tinggi;
+       this.sisi=sisi;
+       
+   }
+//    Scanner input= new Scanner (System.in);
+    
+//    public void tampilan(){
+//        System.out.println("masukkan alas: ");
+//        alas= input.nextDouble();
+//        System.out.println("masukkan tinggi: ");
+//        tinggi= input.nextDouble();
+//        System.out.println("masukkan miring: ");
+//        miring= input.nextDouble();
+//        
+//    }
+    public void luas(int sisi,int tinggi){
+        double luas= 0.5*alas*tinggi;
+        JOptionPane.showMessageDialog(null, "luas segitiga: "+luas);
+    }
+    
+    public void keliling(int sisi){
+        double keliling= sisi + sisi + sisi;
+        JOptionPane.showMessageDialog(null, "keliling segitiga: "+keliling);
+    }
+    public static void main(String[] args) {
+      Segitiga sg= new Segitiga();
+      sg.alas= Integer.parseInt(JOptionPane.showInputDialog("alas: " ));
+      sg.tinggi=Integer.parseInt(JOptionPane.showInputDialog("tinggi: "));
+      sg.sisi=Integer.parseInt(JOptionPane.showInputDialog("sisi: "));
+      sg.keliling(sg.sisi);
+      sg.luas(sg.alas,sg.tinggi);
+    }
+}
