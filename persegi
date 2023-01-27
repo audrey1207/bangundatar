@@ -1,0 +1,49 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package object;
+
+import java.util.Scanner;
+import javax.swing.JOptionPane;
+
+/**
+ *
+ * @author audre
+ */
+public class persegipanjang {
+//    Scanner input= new Scanner (System.in);
+    int panjang; 
+    int lebar;
+    
+    public persegipanjang(){
+        this.panjang=panjang;
+        this.lebar=lebar;
+    }
+    
+//    public void tampilan (){
+//        System.out.println("masukkan panjang: ");
+//       panjang= input.nextInt();
+//        System.out.println("masukkan lebar: ");
+//        lebar= input.nextInt();
+//    }
+    
+    public void luaspp (){
+        int luaspp= panjang*lebar;
+        JOptionPane.showMessageDialog(null, "Luas persegi panjang: "+luaspp);
+    }
+    
+    public void kellpp (int panjang, int lebar){
+        int kellpp= 2*(panjang*lebar);
+        JOptionPane.showMessageDialog(null, "Luas persegi panjang: "+kellpp);
+    }
+    
+    public static void main(String[] args) {
+      persegipanjang pp= new persegipanjang();
+      pp.panjang= Integer.parseInt(JOptionPane.showInputDialog("panjang: " ));
+      pp.lebar=Integer.parseInt(JOptionPane.showInputDialog("lebar: "));
+      pp.luaspp();
+      pp.kellpp(pp.panjang, pp.lebar);
+    }
+}
