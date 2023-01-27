@@ -1,0 +1,53 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package object;
+
+import java.util.Scanner;
+import javax.swing.JOptionPane;
+
+/**
+ *
+ * @author audre
+ */
+public class jajargenjang {
+    Scanner input= new Scanner (System.in);
+    int alas;
+    int tinggi;
+    int sisimiring;
+    
+    public jajargenjang (){
+       this.alas=alas;
+       this.tinggi=tinggi;
+       this.sisimiring=sisimiring;
+       
+   }
+//    public void tampilan(){
+//        System.out.println("masukkan alas: ");
+//        alas= input.nextInt();
+//        System.out.println("masukkan tinggi: ");
+//        tinggi= input.nextInt();
+//        System.out.println("masukkan sisi miring: ");
+//        sisimiring= input.nextInt();  
+//    }
+    
+    public void luasjg(){
+        int luasjg= alas*tinggi;
+        JOptionPane.showMessageDialog(null, "luas jajar genjang: "+luasjg);
+    }
+    
+    public void kelljg(int alas, int tinggi, int sisimiring){
+        int kelljg= alas*(alas+sisimiring);
+        JOptionPane.showMessageDialog(null, "Keliling jajar genjang: "+kelljg);
+    }
+    public static void main(String[] args) {
+      jajargenjang jg= new jajargenjang();
+      jg.alas= Integer.parseInt(JOptionPane.showInputDialog("alas: " ));
+      jg.tinggi=Integer.parseInt(JOptionPane.showInputDialog("tinggi: "));
+      jg.sisimiring=Integer.parseInt(JOptionPane.showInputDialog("sisimiring: "));
+      jg.luasjg();
+      jg.kelljg(jg.alas, jg.tinggi,jg.sisimiring);
+    }
+}
